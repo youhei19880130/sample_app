@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
+gem 'bootstrap-sass', '2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -44,3 +45,7 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara'
 end
+
+# Twitter Bootstrap
+# gem 'twitter-bootswatch-rails', '~> 3.1.1'
+# gem 'twitter-bootswatch-rails-helpers'

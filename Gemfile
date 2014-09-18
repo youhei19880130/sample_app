@@ -1,15 +1,14 @@
 source 'https://rubygems.org'
 
+gem 'rails', '4.0.5'
+
 group :development do
-    gem 'annotate', '2.5.0'
+  gem 'annotate', '2.5.0'
+  gem 'sqlite3', '1.3.8' # Use sqlite3 as the database for Active Record
 end
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
 gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby', '3.1.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -26,8 +25,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
-
+group :doc do
+  gem 'sdoc', '0.3.20', require: false
+end
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
@@ -52,6 +52,11 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails','4.1.0'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
 end
 
 # Twitter Bootstrap
